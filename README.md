@@ -84,6 +84,14 @@ access-switch1(config-if-range)# switchport access vlan 2
 access-switch1(config-if-range)# exit
 
 STEP10
+Configure trunk ports for inter-VLAN routing (If you are creating more than 2 VLANs).
+Switch(config)# interface gig0/1
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk encapsulation dot1q  
+Switch(config-if)# switchport trunk allowed vlan 10,20,30
+
+
+STEP11
 Save the configuration
 
 Access-switch1(config)# exit
